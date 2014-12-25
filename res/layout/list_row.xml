@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+ 
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="5dip">
+ 
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:src="@drawable/ic_action_photo"/>
+ 
+    </LinearLayout>
+ 
+    <!-- Name of the event Creator-->
+    <TextView
+        android:id="@+id/eventCreator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Krishna Mohan"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="12dip"
+        android:textStyle="bold"/>
+ 
+    <!-- Event Info -->
+    <TextView
+        android:id="@+id/eventInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_below="@+id/thumbnail"
+        android:text="Sample Event in goa..." />
+ 
+    <!-- Rightend Duration -->
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/eventCreator"
+        android:gravity="right"
+        android:text="5:45"
+        android:layout_marginRight="5dip"
+        android:textSize="10dip"
+        android:textColor="#10bcc9"
+        android:textStyle="bold"/>
+
+     <!-- Rightend Arrow -->
+     <!-- 
+     <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow"
+        android:layout_alignParentRight="true"
+        android:lay-out_centerVertical="true"/> 
+        -->
+        <ImageView
+            android:id="@+id/calendar_image"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:src="@drawable/ic_date"
+            android:layout_below="@+id/eventInfo"/>
+        <TextView 
+            android:id="@+id/duedate"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="25th Sep, 2014"
+        	android:textSize="10dip"
+        	android:textColor="@color/black"
+        	android:textStyle="bold"
+        	android:layout_centerVertical="true"
+        	android:paddingTop="5dp"
+        	android:paddingLeft="5dp"
+        	android:layout_toRightOf="@+id/calendar_image"
+        	android:layout_below="@+id/eventInfo"
+            />
+        <ImageView
+            android:id="@+id/persons_image"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:src="@drawable/ic_group"
+            android:layout_below="@+id/calendar_image"
+            />
+	<TextView 
+	    android:id="@+id/eventFriends"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="You"
+    	android:textSize="10dip"
+    	android:textColor="@color/black"
+    	android:textStyle="bold"
+    	android:layout_centerVertical="true"
+    	android:paddingTop="10dp"
+    	android:paddingLeft="5dp"
+    	android:layout_toRightOf="@+id/persons_image"
+    	android:layout_below="@+id/duedate"
+    	/>
+
+    <TextView
+        android:id="@+id/isSync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/persons_image"
+        android:layout_alignParentRight="true"
+        android:gravity="bottom"
+        android:text="Not Synced"
+        android:textColor="#10bcc9"
+        android:textSize="10dip"
+        android:textStyle="bold" />
+ 
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.1" package="com.example.aarya">
+
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="18"/>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <permission android:name="com.example.aarya.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+   <uses-permission android:name="com.example.aarya.permission.C2D_MESSAGE"/>
+   <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+   <application 
+       android:name=".Common"
+       android:allowBackup="true" android:icon="@drawable/ic_aryalogo2" android:label="@string/app_name" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+
+        <activity 
+            android:configChanges="orientation|keyboardHidden|screenSize" 
+            android:label="@string/app_name" 
+            android:name="com.example.aarya.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity 
+            android:configChanges="orientation|keyboardHidden|screenSize" 
+            android:label="@string/add_task" 
+            android:name="com.example.aarya.AddTaskActivity" 
+            android:parentActivityName="com.example.aarya.HomeActivity" 
+            android:windowSoftInputMode="stateVisible|adjustResize">
+            <meta-data 
+                android:name="android.support.PARENT_ACTIVITY" 
+                android:value="com.example.aarya.HomeActivity"/>
+        </activity>
+
+        <service android:enabled="true" android:name="com.example.aarya.SchedulerService">
+        </service>
+        <service android:enabled="true" android:name="com.example.aarya.NotifyService">
+        </service>
+		<provider 
+		    android:name=".DataProvider"
+		    android:authorities="com.example.aarya.provider"
+		    android:exported="false"></provider>
+        
+        
+        <activity 
+            android:label="@string/title_activity_sign_in" 
+            android:name="com.example.aarya.SignInActivity">
+        </activity>
+        <activity 
+            android:label="@string/title_activity_friends"
+            android:name="com.example.aarya.AddFriendsActivity"></activity>
+        <activity 
+            android:label="@string/title_activity_login" 
+            android:name="com.example.aarya.LogInActivity">    
+        </activity>
+        <activity 
+            android:label="@string/title_activity_friends" 
+            android:name="com.example.aarya.FriendsListActivity">    
+        </activity>
+        <service android:enabled="true" android:name="com.example.aarya.GCMIntentService"/>
+        <receiver android:name="com.example.aarya.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.example.aarya"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.example.aarya"/>
+            </intent-filter>
+        </receiver>
+    	<receiver android:name="com.example.aarya.NetBroadcastReceiver">
+    	    <intent-filter >
+    	        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+    	    </intent-filter>
+    	</receiver>
+        <activity android:launchMode="singleTop" android:name=".RegisterActivity"/>
+</application>
+
+</manifest>

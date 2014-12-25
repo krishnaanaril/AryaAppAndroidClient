@@ -1,0 +1,17 @@
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- <item 
+            android:id="@+id/action_addFriends"
+            android:title="@string/addfriends"
+            android:icon="@drawable/ic_action_user_add"
+            android:showAsAction="ifRoom"/> -->
+        <item 
+            android:id="@+id/action_friendsRefresh"
+            android:title="@string/addfriends"
+            android:icon="@drawable/ic_action_refresh"
+            android:showAsAction="ifRoom"/>
+        <item 
+            android:id="@+id/action_done"
+            android:orderInCategory="100"
+	        android:showAsAction="ifRoom"
+	        android:title="@string/done"/>
+    </menu>

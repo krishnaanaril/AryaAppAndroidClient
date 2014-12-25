@@ -1,0 +1,82 @@
+  <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical" >
+        
+        <ScrollView
+        android:id="@+id/layout1"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/txtSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="top|left"
+            android:hint="@string/text_reminder"
+            android:inputType="textCapSentences|textMultiLine|textAutoComplete" />
+
+    	 </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true" >
+
+            <ImageView
+                android:id="@+id/user_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="5sp"
+                android:background="@drawable/ic_action_user_add"
+                android:contentDescription="@string/dummy" 
+                android:onClick="viewFriends"/>
+
+            <ImageView
+                android:id="@+id/image_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="5sp"
+                android:background="@drawable/ic_date"
+                android:contentDescription="@string/dummy"
+                android:onClick="setDueDate" />
+
+            <ImageView
+                android:id="@+id/time_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="5sp"
+                android:background="@drawable/ic_action_alarms"
+                android:contentDescription="@string/dummy"
+                android:onClick="settime_task" />
+
+            <TextView
+                android:id="@+id/txttime_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="5sp"
+                android:visibility="gone" />
+        </LinearLayout>
+        
+    </RelativeLayout>
+   
+

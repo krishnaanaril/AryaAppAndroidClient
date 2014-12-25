@@ -1,0 +1,60 @@
+# view res/layout/activity_home.xml #generated:2
+-keep class android.support.v4.widget.DrawerLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:56
+-keep class com.example.aarya.AddFriendsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:31
+-keep class com.example.aarya.AddTaskActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:17
+-keep class com.example.aarya.Common { <init>(...); }
+
+# view AndroidManifest.xml #generated:46
+-keep class com.example.aarya.DataProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:63
+-keep class com.example.aarya.FriendsListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:67
+-keep class com.example.aarya.GCMIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:68
+-keep class com.example.aarya.GcmBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:22
+-keep class com.example.aarya.HomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:59
+-keep class com.example.aarya.LogInActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class com.example.aarya.NetBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.example.aarya.NotifyService { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
+-keep class com.example.aarya.RegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:42
+-keep class com.example.aarya.SchedulerService { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.example.aarya.SignInActivity { <init>(...); }
+
+# view res/layout/activity_sign_in.xml #generated:11
+-keep class com.google.android.gms.common.SignInButton { <init>(...); }
+
+# onClick res/layout/activity_sign_in.xml #generated:11
+-keepclassmembers class * { *** onLoginClick(...); }
+
+# onClick res/layout/activity_add_task.xml #generated:45
+-keepclassmembers class * { *** setDueDate(...); }
+
+# onClick res/layout/activity_add_task.xml #generated:57
+-keepclassmembers class * { *** settime_task(...); }
+
+# onClick res/layout/activity_add_task.xml #generated:33
+-keepclassmembers class * { *** viewFriends(...); }
+

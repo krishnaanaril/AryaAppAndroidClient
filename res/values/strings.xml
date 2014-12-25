@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Havents</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_add">Add</string>
+    <string name="dummy">Lorem Epsom</string>
+    <string name="add_task">Add Task</string>
+    <string name="save_task">Save</string>
+    <string name="cancel_task">Cancel</string>
+    <string name="text_reminder">Enter reminder details</string>
+    <string name="home_title">Your Tasks</string>
+    <string name="context_title">Select Task Item</string>
+    <string name="context_remove">Remove</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="comingsoon">Coming Soon. :)</string>
+    <string name="notification_title">AryaApp</string>
+    <string name="server_registering">Server Registering</string>
+    <string name="server_registered">Server Registered</string>
+    <string name="server_register_error">Server Register Error</string>
+    <string name="server_unregistered">Server Un-Registered</string>
+    <string name="server_unregister_error">Server Un-Register Error</string>
+
+    <string-array name="arya_sidebar">
+        <item>Calendar</item>
+        <item>Add Friends</item>
+        <item>Completed</item>
+        <item>Procrastinated</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="title_activity_login">Log In</string>
+    <string name="title_activity_friends">Friends</string>
+    <string name="username">User Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+	<string name="login">Log In</string>
+	<string name="add">Add</string>
+	<string name="done">Done</string>
+	<string name="addfriends">Add Friends</string>
+</resources>
